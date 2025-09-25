@@ -1,0 +1,67 @@
+{% extends "base.html" %} {% block content %}
+
+{% if product %}
+ <main class="mt-30 mb-20">
+    <div class="p-8 m-8 bg-white rounded-sm">
+        <div class="flex">
+        <div class="w-[90vh] h-[90vh] p-4 border-1 border-black">
+            <img src="{{product.image.url}}" alt="" class="w-[50vh]">
+            <div class="mt-8 w-[50vh] flex justify-between">
+                <a href=""><button class="pr-5 pl-5 pt-3 pb-3 border-black border-1 delay-150 duration-300 hover:bg-gray-100 ">ADD TO CART</button></a>
+                <button class="pr-8 pl-8 pt-4 pb-4 text-white bg-black transition ease-in-out delay-150 duration-300 hover:-translate-y-1 hover:0">BUY NOW</button>
+            </div>
+        </div>
+        <div class="w-[170vh] h-[90vh] overflow-auto px-4">
+            <p class="mt-1 text-gray-500">TRIGR</p>
+            <p class="mt-1 text-sm">{{product.content}}</p>
+            <div class=" flex gap-2">
+                <h1 class="mt-1 text-xl ">{{product.title}}</h1>
+            <p class="mt-1 text-blue-400 ">77% off</p>
+            </div>
+            <p class="mt-1  text-gray-500">50 ratings and 15 reviews</p>
+            <div class="flex gap-2 mt-6">
+                <p class=" text-gray-500 mt-1 mr-12">Size</p>
+                <h1 class=" mt-1 py-2 px-4 border-1 border-gray-300">S</h1>
+                <h1 class=" mt-1 py-2 px-4 border-1 border-gray-300">M</h1>
+                <h1 class=" mt-1 py-2 px-4 border-1 border-gray-300">L</h1>
+                <h1 class=" mt-1 py-2 px-4 border-1 border-gray-300">XL</h1>
+                <h1 class=" mt-1 p-2 border-1 border-gray-300">XXL</h1>
+                <h1 class=" mt-1 p-2 border-1 border-gray-300">XXXL</h1>
+            </div>
+            <h1 class="mt-8 ">Available offers</h1>
+            <ul type="circle">
+                <li class="text-sm text-gray-500 mt-1">Bank Offer5% cashback on Flipkart Axis Bank Credit Card upto ₹4,000 per statement quarter T&C</li>
+                <li class="text-sm text-gray-500 mt-1">Bank Offer5% cashback on Flipkart SBI Credit Card upto ₹4,000 per statement quarter T&C</li>
+                <li class="text-sm text-gray-500 mt-1">Bank Offer5% cashback on Flipkart Axis Bank Debit Card Card T&C</li>
+            </ul>
+            <p class="text-sm mt-8 mb-2">Delivery by6 Sep, Saturday</p>
+            <h1 class="mt-8 mb-4">Product Details</h1>
+            <div class="flex gap-12">
+                <ul class="">
+                <li class=" text-gray-500 mb-2">Brand</li>
+                <li class=" text-gray-500 mb-2">Color</li>
+                <li class=" text-gray-500 mb-2">Fabric</li>
+                <li class=" text-gray-500 mb-2">Neck</li>
+                <li class=" text-gray-500 mb-2">Pattern</li>
+                <li class=" text-gray-500 mb-2">Sleeve</li>
+                <li class=" text-gray-500 mb-2">Style Code</li>
+                <li class=" text-gray-500 mb-2">Suitable For</li>
+                </ul>
+                <ul>
+                    <li class=" mb-2">TRIPR</li>
+                    <li class=" mb-2">Beige</li>
+                    <li class=" mb-2">Cotton Blend</li>
+                    <li class=" mb-2">Collared Neck</li>
+                    <li class=" mb-2">Solid</li>
+                    <li class=" mb-2">Half Sleeve</li>
+                    <li class=" mb-2">TBGHNFULSWEATERR-DP-PLAINST160</li>
+                    <li class=" mb-2">Western Wear</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    </div>
+</main>
+{% endif %}
+
+{% endblock content %}

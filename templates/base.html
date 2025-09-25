@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <link rel="stylesheet" href="static\image\css\style.css">
+</head>
+<body class="bg-stone-200">
+    <header  class="nav">
+        <div class="flex justify-between p-6">
+            <h1 class="text-3xl">KAIRA</h1>
+            <ul class="flex gap-12">
+             <li class=""><a href="{% url 'home' %}">HOME</a></li>
+             <li class=""><a href="{% url 'shop' %}">SHOP</a></li>
+             <li class=""><a href="{% url 'blog' %}">BLOG</a></li>
+             <li class=""><a href="">PAGES</a></li>
+             <li class=""><a href="">BLOGS</a></li>
+             <li class=""><a href="">CONTACT</a></li>
+            </ul>
+            <div class="flex gap-6">
+             <p class="">WISHLIST(0)</p>
+             <p class="">CART(0)</p>
+             <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </div><hr>
+    </header>
+    {% block content %}
+    {% endblock content %}
+
+    <footer class="flex justify-between p-30 pb-16">
+        <div class="w-50">
+            <h1 class="text-2xl">KAIRA</h1>
+            <p class="mt-2 mb-2">Gravida massa volutpat aenean odio. Amet, turpis erat nullam fringilla elementum diam in. Nisi, purus vitae, ultrices nunc. Sit ac sit suscipit hendrerit.</p>
+            <div class="flex gap-2 mt-6">
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.youtube.com/channel/UCeRnRueOUXhPa7XKVQM-S4g"><i class="fa-brands fa-youtube"></i></a>
+                <a href=""><i class="fa-brands fa-pinterest"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="w-50 mt-2">
+            <h1>QUICK LINKS</h1>
+            <p class="mt-2 ">Home</p>
+            <p class="">About</p>
+            <p class="">Services</p>
+            <p class="">Single item</p>
+            <p class="">Contact</p>
+        </div>
+        <div class="w-50 mt-2">
+            <h1>HELP & INFO</h1>
+            <p class="mt-2 ">Track Your Order</p>
+            <p class="">Returns + Exchanges</p>
+            <p class="">Shipping + Delivery</p>
+            <p class="">Contact Us</p>
+            <p class="">Find Us Easy</p>
+            <p class="">FAQS</p>
+        </div>
+        <div class="w-50 mt-2">
+            <h1>CONTACT US</h1>
+            <p class="mt-2 ">Do you have any questions or suggestions?</p>
+            <p class="">contact@yourcompany.com</p>
+            <p class="">Do you need support? Give us a call.</p>
+            <p class="">+91 8748958874</p>
+        </div>
+    </footer>
+    <h1 class=" font-sans">Divyanshu Pandey</h1>
+</body>
+</html>

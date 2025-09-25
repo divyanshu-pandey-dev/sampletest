@@ -1,0 +1,23 @@
+{% extends "base.html" %} {% block content %}
+<h1 class="mt-12 text-5xl text-center">New Collections</h1>
+    <div class="flex justify-center mt-8">
+        <p class="w-100 text-stone-500 text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe voluptas ut dolorum consequuntur, adipisci repellat! Eveniet commodi voluptatem voluptate, eum minima, in suscipit explicabo voluptatibus harum, quibusdam ex repellat eaque!</p>
+    </div>
+
+<div class="flex grid grid-cols-4 p-12 mt-12">
+    {% if data %}
+     {% for d in data %}
+   
+        <div class="flex-col ">
+        <a href="{% url 'checkout' d.id %}"><img src="{{d.image.url}}" alt="" class="w-80 transition ease-in-out delay-150 duration-300 hover:-translate-y-1 hover:scale-110 "></a>
+        <h1 class="w-80 mt-4 text-xl">{{d.title}}</h1>
+        <div class=" w-60 justify-between mt-2">
+            <p>{{d.content}}</p>
+            <a href="{% url 'cart' d.id %}"><button class="mt-4 border-1 border-black p-1">Add To Cart</button></a>
+        </div>
+    </div>
+        
+
+    {% endfor %} {% endif %}
+</div>
+{% endblock content %}

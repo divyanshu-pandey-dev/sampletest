@@ -1,0 +1,17 @@
+{% extends "base.html" %} {% block content %} 
+<h1 class="mt-12 text-5xl text-center">New Collections</h1>
+        <div class="flex justify-center mt-8">
+            <p class="w-100 text-stone-500 text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe voluptas ut dolorum consequuntur, adipisci repellat! Eveniet commodi voluptatem voluptate, eum minima, in suscipit explicabo voluptatibus harum, quibusdam ex repellat eaque!</p>
+        </div>
+{% if data %}
+ {% for d in data %}
+<div class="bg-white m-20 flex">
+    <img src="{{d.image8.url}}" alt="" class="w-[80vh]">
+    <div class=" p-14">
+        <h1 class="text-6xl">{{d.title2}}</h1>
+    <p class="text-xl text-grey-200 mt-10">{{d.content2}}</p>
+    <button class="bg-black text-white p-2 text-xl mt-10">SHOP COLLECTION</button>
+    </div>
+</div>
+{% endfor %} {% endif %}
+{% endblock content %}

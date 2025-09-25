@@ -1,0 +1,19 @@
+
+{% extends "base.html" %} {% block content %}
+<h1 class="mt-12 text-6xl text-center">New Collections</h1>
+        <div class="flex justify-center mt-8">
+            <p class="w-100 text-stone-500 text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe voluptas ut dolorum consequuntur, adipisci repellat! Eveniet commodi voluptatem voluptate, eum minima, in suscipit explicabo voluptatibus harum, quibusdam ex repellat eaque!</p>
+        </div>
+
+<div class="flex grid grid-cols-4">
+  {% if data %}
+  {% for d in data %} 
+  <div class="flex-col pr-8 pl-8 pb-8 pt-0 mt-12">
+    <img src="{{d.image.url}}" alt="" class="w-65"/>
+    <h1 class="w-65 mt-4 text-xl">{{d.title}}</h1>
+    <p class="text-sm w-65 text-stone-500 mt-4">{{d.content}}</p>
+    <p class="mt-4 ">Discover Now</p>
+  </div>
+  {% endfor %} {% endif %}
+</div>
+{% endblock content %}
